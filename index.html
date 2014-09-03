@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Insert title here</title>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script src="onshown.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			var show = $('div').onShown({
+        callback:function(el){
+          console.log(el);
+        }
+      });
+		});
+	</script>
+	<style type="text/css">
+		#a {
+      background: #eee;
+      padding-bottom: 1000px;
+    }
+    
+    #b,#c {
+      background: red;
+      height: 200px;
+    }
+	</style>
+</head>
+<body>
+  <div id="a">
+    <div id="b">
+    
+    </div>
+  </div>
+  <div id="c"></div>
+</body>
+</html>
