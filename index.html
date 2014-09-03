@@ -10,23 +10,28 @@
 			var show = $('div').onShown({
         callback:function(el){
           console.log(el);
+          $('#log').append('<p>'+(new Date())+' '+$(el).attr('id')+' is shown</p>');
         }
       });
 		});
 	</script>
 	<style type="text/css">
-		#a {
-      background: #eee;
-      padding-bottom: 1000px;
-    }
-    
-    #b,#c {
-      background: red;
-      height: 200px;
-    }
+	    #a {
+	      background: #eee;
+	      padding-bottom: 1000px;
+	    }
+	    
+	    #b,#c {
+	      background: red;
+	      height: 200px;
+	    }
+	    #log {
+	      position: fixed;
+	    }
 	</style>
 </head>
 <body>
+  <div id="log"></div>
   <div id="a">
     <div id="b">
     
